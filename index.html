@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SweetCrumb Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="theme-light">
+  <header class="nav">
+    <div class="nav__brand">
+      <img src="assets/logo.png" alt="SweetCrumb" />
+    </div>
+    <nav class="nav__links">
+      <a href="index.html" class="active">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="track-order.html" >Track My Order</a>
+      <button id="openCart" class="btn btn--pill">Cart <span id="cartCount" class="badge">0</span></button>
+   
+      <button id="playDiscountBtn" class="btn btn--primary">🎁 Play & Win Discount</button>
+
+      
+    </nav>
+  </header>
+
+  <!-- Hero with slideshow -->
+<section class="hero">
+  <div class="hero__slides">
+   
+    <!-- Slide 1 (Video) -->
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/bakery2.mp4" type="video/mp4">
+      </video>
+    </div> 
+    <!-- Slide 1 (Image) -->
+    <div class="slide active">
+      <img src="assets/bac1.jpg" alt="Bakery Delight">
+    </div>
+
+    <!-- Slide 2 (Video) -->
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/bakery.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <!-- Slide 3 (Image) -->
+    <div class="slide">
+      <img src="assets/bac2.jpg" alt="Cakes and Pastries">
+    </div>
+
+    <!-- Slide 4 (Video) -->
+    <div class="slide">
+      <video autoplay muted loop playsinline>
+        <source src="assets/videos/bakery.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+
+  </div>
+
+  <!-- Dark overlay -->
+  <div class="hero__overlay"></div>
+
+  <!-- Hero Content -->
+  <div class="hero__content">
+    <h2>Freshly Baked Happiness</h2>
+      <h5>Elegant bakes, daily. Cakes, cookies, pastries & more — handcrafted with love</h5>
+    <br>
+    <div class="hero__buttons">
+      <a href="menu.html" class="btn btn--primary">Browse Menu</a>
+     
+    </div>
+  </div>
+</section>
+
+  <!-- Highlights -->
+  
+
+  <!-- Popular Items Collage (Glen's style) -->
+  <section class="popular">
+    <h2 class="title">Popular Items</h2>
+    <div class="collage">
+      <div class="col-item wide"><img src="assets/macaroons.jpg" alt="Macaroons"><span>Macaroons</span></div>
+      <div class="col-item tall"><img src="assets/choccup.jpg" alt="Cup Cakes"><span>Cup Cakes</span></div>
+      <div class="col-item"><img src="assets/tira.jpg" alt="Tiramisu"><span>Tiramisu</span></div>
+<div class="col-item"><img src="assets/products/cake4.jpg" alt="cheesecake"><span>cheesecake</span></div>
+   <div class="col-item"><img src="assets/blue.jpg" alt="ombre cake"><span>Ombre cake</span></div>
+      <div class="col-item"><img src="assets/pie.jpg" alt="pie"><span>Pie</span></div>
+      <div class="col-item"><img src="assets/cookies.jpg" alt="Cookies"><span>Cookies</span></div>
+      <div class="col-item"><img src="assets/products/pastry2.jpg" alt="pastry"><span>Opera pastry</span></div>
+      <div class="col-item"><img src="assets/products/fudge brownies.jpg" alt="Brownies"><span>Brownies</span></div>
+
+<div class="col-item"><img src="assets/products/redvelvet.jpg" alt="Redvelevt"><span>Redvelvet </span></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="about__text">
+      <h2>Our Story</h2>
+      <p>We’re a small team of bakers and dreamers bringing you small-batch bakes made with premium ingredients.
+      From birthdays to coffee breaks, we’ve got your cravings covered.</p>
+      <ul class="bullets">
+        <li>Daily fresh bakes</li>
+        <li>Eggless & custom options</li>
+        <li>Citywide delivery</li>
+      </ul>
+    </div>
+    <div class="about__img">
+      <img src="assets/about.jpg" alt="Our team at the bakery">
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <div class="contact__card">
+      <h2>Contact</h2>
+      <p><strong>Store hours:</strong> 9:00–21:00 (Mon–Sun)</p>
+      <p><strong>Phone:</strong> +91-90000-12345</p>
+      <p><strong>Email:</strong> hello@sweetcrumb.in</p>
+      <p><strong>Address:</strong> 221B Baker Street, Bengaluru</p>
+      <a href="menu.html" class="btn btn--primary">Order Now</a>
+    </div>
+    <iframe
+      class="map"
+      title="Map"
+      src="https://www.openstreetmap.org/export/embed.html?bbox=77.55%2C12.95%2C77.6%2C13.0&layer=mapnik"
+      loading="lazy"></iframe>
+  </section>
+
+  <footer class="footer">&copy; <span id="year"></span> SweetCrumb Bakery • Made with ♥</footer>
+
+  <!-- Shared Cart Drawer -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer__header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div id="cartItems" class="drawer__items"></div>
+    <div class="drawer__footer">
+      <div class="row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+      <div class="row small"><span>GST (5%)</span><span id="cartTax">₹0</span></div>
+      <div class="row small"><span>Delivery</span><span id="cartDelivery">₹49</span></div>
+      <div class="row total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button id="checkoutBtn" class="btn btn--primary btn--block" disabled>
+  Checkout
+</button>
+
+      <button id="clearCart" class="btn btn--ghost btn--block">Clear Cart</button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+<!-- Play & Win Discount (Quiz) -->
+ <!-- Quiz Popup -->
+<div id="quizPopup" class="popup hidden">
+  <div class="popup-content">
+    <button id="closeQuizBtn" class="close">×</button>
+    <h2>Play & Win Discount 🎉</h2>
+    <p id="quizQuestion">Question will appear here</p>
+    <input id="quizAnswer" type="text" placeholder="Your answer">
+    <button id="submitAnswer" class="btn btn--primary">Submit</button>
+    <p id="quizResult"></p>
+  </div>
+</div>
+
+
+
+</body>
+</html>

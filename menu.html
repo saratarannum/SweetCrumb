@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Menu • SweetCrumb Bakery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="theme-light">
+  <header class="nav">
+    <div class="nav__brand"><img src="assets/logo.png" alt="SweetCrumb" /></div>
+    <nav class="nav__links">
+      <a href="index.html">Home</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+      <button id="openCart" class="btn btn--pill">Cart <span id="cartCount" class="badge">0</span></button>
+    </nav>
+  </header>
+
+  <main class="menu">
+    <h1 class="title"> Menu</h1>
+    <div class="filters">
+      <input id="search" class="input" type="search" placeholder="Search for croissant, red velvet…" aria-label="Search products">
+      <select id="category" class="input" aria-label="Filter by category">
+        <option value="All">All Categories</option>
+      </select>
+      <select id="sort" class="input" aria-label="Sort products">
+        <option value="popular">Sort: Popular</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="name-asc">Name: A → Z</option>
+        <option value="name-desc">Name: Z → A</option>
+      </select>
+    </div>
+    <section id="products" class="grid products"></section>
+  </main>
+
+  <!-- Shared Cart Drawer -->
+  <aside id="cartDrawer" class="drawer">
+    <div class="drawer__header">
+      <h3>Your Cart</h3>
+      <button id="closeCart" class="icon-btn" aria-label="Close cart">&times;</button>
+    </div>
+    <div id="cartItems" class="drawer__items"></div>
+    <div class="drawer__footer">
+      <div class="row"><span>Subtotal</span><strong id="cartSubtotal">₹0</strong></div>
+      <div class="row small"><span>GST (5%)</span><span id="cartTax">₹0</span></div>
+      <div class="row small"><span>Delivery</span><span id="cartDelivery">₹49</span></div>
+      <div class="row total"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+      <button id="checkoutBtn" class="btn btn--primary btn--block" disabled>
+  Checkout
+</button>
+      <button id="clearCart" class="btn btn--ghost btn--block">Clear Cart</button>
+    </div>
+  </aside>
+
+  <script src="app.js"></script>
+</body>
+<footer class="footer">&copy; <span id="year"></span> SweetCrumb Bakery • Made with ♥</footer>
+</html>
